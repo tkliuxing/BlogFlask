@@ -9,4 +9,7 @@ INSTALL_APP = (
 )
 
 for iapp in INSTALL_APP:
-    __import__(iapp+'.views')
+    try:
+        __import__(iapp+'.views')
+    except:
+        pass
