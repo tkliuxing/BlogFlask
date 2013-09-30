@@ -1,5 +1,5 @@
 Flask==0.10.1
 Mako==0.9.0
+Flask-Mako==0.2
 SQLAlchemy==0.8.2
-Scaffold==0.1.4
-nose==1.3.0
+-e git+https://github.com/Aaronontheweb/scaffold-py.git#egg=scaffold
