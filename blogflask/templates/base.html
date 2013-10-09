@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>BlogFlask - <%block name="title">Title</%block></title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="description" content="DESCRIPTIONS">
+	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="/static/css/main.css" type="text/css" />
+	<script type="text/javascript" src="/static/jquery-1.8.0.min.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="/">BlogFlask</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active">
+							<a href="/">
+								<i class="icon-home icon-white"></i>
+								首页
+							</a>
+						</li>
+						<li>
+							<a href="/login/">
+								<i class="icon-circle-arrow-down icon-white"></i>
+								登录
+							</a>
+						</li>
+						<li>
+							<a href="/blog/add/">
+								<i class="icon-pencil icon-white"></i>
+								写文章
+							</a>
+						</li>
+						<li>
+							<a href="/logout/">
+								<i class="icon-circle-arrow-right icon-white"></i>
+								登出
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<%block name="container">
+		</%block>
+		<hr>
+		<footer>
+			<p><a href="http://weibo.com/oyhy" target="_blank">OuYangHongYu</a> 2011-2013</p>
+			<p>本站代码托管于<a href="https://github.com/tkliuxing/BlogFlask/" target="_blank">Github</a>,欢迎clone!</p>
+		</footer>
+	</div>
+</body>
+</html>

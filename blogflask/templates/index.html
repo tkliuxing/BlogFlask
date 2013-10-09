@@ -1,5 +1,74 @@
-this is ${content}<br/>
-this if for loop:<br/>
-% for i in range(10):
-	${content} ${i} <br/>
-% endfor
+<%inherit file="base.html"/>
+<%block name="title">首页</%block>
+<%block name="container">
+<div class="row">
+	<div class="span8">
+		<div class="well">
+			<div class="alert alert-success">
+				<h4>Title</h4>
+			</div>
+			<div class="alert alert-message">
+				content text with markdown
+			</div>
+			<div class="well note date">
+					<img src="javascript:;" style="width:40px;height:40px;">
+					<div class="date">
+						<p>Author name</p>
+						<p>Create time</p>
+					</div>
+					<a class="btn btn-danger" href="javascript:;">
+						删除
+					</a>
+					<a class="btn btn-primary" href="javascript:;">
+						编辑
+					</a>
+					<a class="btn btn-success" href="javascript:;">
+						<i class="icon-comment"> </i>
+						评论(0)
+					</a>
+			</div>
+			<div class="well tags">
+				<h5>标签:</h5>
+				<a href="javascript:;" class="label label-info">tag1</a>
+				<a href="javascript:;" class="label label-success">tag2</a>
+			</div>
+		</div>
+		<div class="well">
+			<div class="alert alert-success">
+				<h2>Hello world!</h2>
+			</div>
+			<div class="alert alert-message">
+				This is new blog site.
+			</div>
+			<div class="alert alert-info"><strong>Someone</strong> at <strong>Today</strong></div>
+		</div>
+		<div class="pagination">
+			<ul>
+				<li>
+					<a href="./?p=1">前一页</a>
+				</li>
+				<li class="active">
+					<a href="javascript:;">1</a>
+				</li>
+				<li>
+					<a href="./?p=2">2</a>
+				</li>
+				<li>
+					<a href="./?p=2">后一页</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="span4">
+		<div class="well">
+			<h4>标签:</h4>
+			<a href="javascript:;" class="label label-info">tag1</a>
+			<a href="javascript:;" class="label label-success">tag2</a>
+		</div>
+		<div class="well">
+			<h4>简介:</h4>
+			USERPROFILE
+		</div>
+	</div>
+</div>
+</%block>
