@@ -1,0 +1,28 @@
+<%inherit file="base.html"/>
+<%block name="title">编辑</%block>
+<%block name="container">
+<div class="span12">
+	<div class="well">
+		<form method="post" action=".">
+			<div class="control-group">
+				<label class="control-label">标题</label>
+				<div class="controls">
+				% if C['title']:
+					<input type="text" name="title" class="span4" value="${C['title']}" style="height:30px;">
+				% else:
+					<input type="text" name="title" class="span4" style="height:30px;">
+				% endif
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">内容</label>
+				<div class="controls">
+					<textarea name="content" class="span10" rows="15">${C['content']}</textarea>
+				</div>
+			</div>
+			<input type="submit" class="btn btn-primary" value="提交"/>
+			<input type="button" class="btn" value="预览"/>
+		</form>
+	</div>
+</div>
+</%block>

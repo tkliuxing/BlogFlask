@@ -44,3 +44,9 @@ div.note-body {
 div.pencilset {
 	width: 300px;
 }
+pre {
+	padding: 0;
+}
+code {
+	margin: 0;
+}

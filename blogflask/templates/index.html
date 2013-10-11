@@ -1,17 +1,26 @@
 <%inherit file="base.html"/>
+<%!
+from blogflask.templatetags import markdown, gravatar
+%>
 <%block name="title">首页</%block>
 <%block name="container">
 <div class="row">
 	<div class="span8">
 		<div class="well">
-			<div class="alert alert-success">
+			<div>
 				<h4>Title</h4>
 			</div>
-			<div class="alert alert-message">
-				content text with markdown
+			<hr/>
+			<div>
+			% if text:
+				${text | markdown}
+			% else:
+				无内容
+			% endif
 			</div>
-			<div class="well note date">
-					<img src="javascript:;" style="width:40px;height:40px;">
+			<hr/>
+			<div class="note date">
+					<img src="${'leelealee@gmail.com' | gravatar}?s=40" style="width:40px;height:40px;">
 					<div class="date">
 						<p>Author name</p>
 						<p>Create time</p>
@@ -27,8 +36,8 @@
 						评论(0)
 					</a>
 			</div>
-			<div class="well tags">
-				<h5>标签:</h5>
+			<hr/>
+			<div>
 				<a href="javascript:;" class="label label-info">tag1</a>
 				<a href="javascript:;" class="label label-success">tag2</a>
 			</div>

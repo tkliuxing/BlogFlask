@@ -18,6 +18,8 @@ INSTALL_APP = (
     'blogflask',
 )
 
+SECRET_KEY = '6s#q6tf38%)ku*ib5-ga^@5fhd0&*hw%&amp;o8t4pq5-7tzr$t)xk'
+
 for iapp in INSTALL_APP:
     try:
         __import__(iapp+'.views')
